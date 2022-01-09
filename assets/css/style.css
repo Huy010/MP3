@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+:root {
+    --primary-color: #ec1f55;
+    --text-color: #333;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.player {
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;    
+    /* border: 1px solid springgreen; */
+    box-shadow: 0px 0px 5px rgb(177, 177, 177);
+}
+.dashboard {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    max-width: 480px;
+    padding: 0 30px 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0px -1px 5px black;
+    /* border: 1px solid rgb(2, 2, 1); */
+}
+
+.dashboard header {
+    text-align: center;
+    /* border: 1px solid black; */
+    
+}
+
+.dashboard h4 {
+    color: var(--primary-color);
+}
+
+
+.cd {
+    /* border: 1px solid red; */
+    animation: all linear 0.3s;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.control {
+    /* border: 1px solid steelblue; */
+    margin: 0 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control i {
+    color: rgb(121, 121, 121);
+}
+
+.control i:hover {
+    cursor: pointer;
+}
+
+.control i:active {
+    opacity: 0.5;
+}
+
+.btn.btn-toggle-play i {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.btn.btn-toggle-play.active i.play{
+    display: none;
+}
+
+i.pause { 
+    display: none;
+}
+
+.btn.btn-toggle-play.active .pause{
+    display: inline-block;
+}
+
+
+.btn.btn-repeat.active i,
+.btn.btn-random.active i {
+    color: var(--primary-color);
+}
+
+
+
+.dashboard input {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Playlist */
+.playlist {
+    /* border: 1px solid orange; */
+    margin-top: 370px;
+    background-color: rgb(231, 231, 231);
+    padding-top: 1px;
+    margin-bottom: 82px;
+
+}
+
+.song.active {
+    background-color: var(--primary-color);
+}
+
+.song.active i,
+.song.active .title,
+.song.active .author {
+    color: white;
+}
+
+
+
+.song {
+    background-color: white;
+    margin: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgb(148, 148, 148);
+}
+
+.song:hover {
+    cursor: pointer;
+}
+
+.song-thumb {
+    width: 44px;
+    height: 44px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.body {
+    padding: 0px 16px;
+    flex: 1;
+}
+
+.title {
+    line-height: 1;
+}
+
+.author {
+    font-size: 0.7rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+.option {
+    padding: 10px;
+}
+
+/* Option category */
+
+.category {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    max-width: 480px;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+}
+
+.vietnamese-song {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.vietnamese-rap {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.kpop {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.giaHuy {
+    background-image: url(../222Huy.jpeg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 210px;
+}
+
+.vietnamese-song:hover,
+.vietnamese-rap:hover,
+.kpop:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.vietnamese-song:active,
+.vietnamese-rap:active,
+.kpop:active {
+    opacity: 0.5;
+}
