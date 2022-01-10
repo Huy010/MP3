@@ -236,6 +236,12 @@ i.pause {
     background-repeat: no-repeat;
     height: 100%;
     width: 210px;
+    transition: all ease-in-out 0.3s;
+}
+
+.giaHuy.active {
+    background-image: url(../Huy23.jpg);
+    
 }
 
 .vietnamese-song:hover,

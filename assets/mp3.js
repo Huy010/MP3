@@ -28,12 +28,14 @@ const nextBtn = $(".btn-next");
 const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
 const playlist = $(".playlist");
+const giahuy = $('.giaHuy')
 
 const app = {
   currentIndex: 0,
   isPlaying: false,
   isRandom: false,
   isRepeat: false,
+  isGiaHuy: false,
   config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
   viet: [
     {
@@ -249,6 +251,17 @@ const app = {
         }
       }
     };
+
+    //Khi click vào hình Gia Huy
+    giahuy.onclick = function() {
+      if(app.isGiaHuy) {
+        giahuy.classList.remove('active');
+        app.isGiaHuy = false;
+      } else {
+        giahuy.classList.add('active');
+        app.isGiaHuy = true;
+      }
+    }
   },
   loadCurrentSong: function () {
     heading.textContent = this.currentSong.name;
